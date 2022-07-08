@@ -1,0 +1,47 @@
+<h3>PIPE CURRENCY >> Precio: {{ price | currency:'EUR':'symbol':'6.1-2'}}</h3>
+
+<h3>PIPE CURRENCY >> Precio: {{ price | currency:'EUR':'code':'1.1-4'}}</h3>
+
+<hr>
+
+<h3>DECIMAL PIPE >> Decimal: {{ decimal | number:'1.3-3' }}</h3>
+
+<hr>
+
+<h3>DATE PIPE >> Date: sin formato >> {{ date }}</h3>
+<h3>DATE PIPE >> Date: short >> {{ date | date:'short' }}</h3>
+<h3>DATE PIPE >> Date: long >> {{ date | date:'long' }}</h3>
+<h3>DATE PIPE >> Date: shortTime >> {{ date | date:'shortTime' }}</h3>
+<h3>DATE PIPE >> Date: shortDate >> {{ date | date:'shortDate' }}</h3>
+<h3>DATE PIPE >> Date: dd-MM-yyyy >> {{ date | date:'dd-MM-yyyy' }}</h3>
+<h3>DATE PIPE >> Date: dd-LLLL-yy >> {{ date | date:'dd-LLLL-yy' }}</h3>
+
+<a href="https://angular.io/api/common/DatePipe" target="_blank">Ver angular.io > DatePipe para más formatos</a>
+
+<hr>
+
+<h3>PERCENT PIPE >> Percent: {{ percent | percent:'1.3' }}</h3>
+
+<hr>
+
+<h3>JSON PIPE >> Pupil: {{ pupil | json }}</h3>
+
+<hr>
+
+<h3>LOWERCASEPIPE >> Text: {{ text | lowercase }}</h3>
+<h3>LOWERCASEPIPE >> Text: {{ text | uppercase }}</h3>
+<h3>LOWERCASEPIPE >> Text: {{ text | titlecase }}</h3>
+
+<hr>
+
+<!-- OJO!! Que la última posición del slice no entra!!  -->
+<!-- Como en el slice de javascript -->
+<h3>SLICE PIPE>> Slice: {{ slice | slice:2:4 }}</h3>
+
+<hr>
+
+<p *ngFor="let item of asyncPipe$ | async">{{ item.title }}</p>
+
+<hr>
+
+<h3>CUSTOM PIPE >> Text: {{ text | reverse }}</h3>
